@@ -8,7 +8,6 @@ A simple RESTful API for managing users with JWT-based authentication and basic 
 - [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Setup Instructions](#setup-instructions)
-- [Environment Variables](#environment-variables)
 - [API Endpoints](#api-endpoints)
 - [Testing Instructions](#testing-instructions)
 - [Usage](#usage)
@@ -36,6 +35,9 @@ A simple RESTful API for managing users with JWT-based authentication and basic 
 
 ```
 user-management-api/
+├── __tests__/
+│   ├── auth.test.js
+│   └── user.test.js
 ├── controllers/
 │   ├── authController.js
 │   └── userController.js
