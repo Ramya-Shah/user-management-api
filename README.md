@@ -8,6 +8,7 @@ A simple RESTful API for managing users with JWT-based authentication and basic 
 - [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Setup Instructions](#setup-instructions)
+- [API Documentation](#api-documentation)
 - [API Endpoints](#api-endpoints)
 - [Testing Instructions](#testing-instructions)
 - [Usage](#usage)
@@ -106,6 +107,18 @@ user-management-api/
 
    The server will run on the port specified in the `.env` file (default: 3000).
 
+## API Documentation
+
+This project includes interactive API documentation using Swagger UI.
+
+Once the server is running, you can access the API documentation at:
+
+```
+http://localhost:3000/api-docs
+```
+
+The Swagger UI provides a visual interface to explore the API endpoints, send test requests, and view responses.
+
 ## API Endpoints
 
 ### Authentication
@@ -192,6 +205,7 @@ This project uses **Jest** and **Supertest** for testing API endpoints.
    ```bash
    npm test
    ```
+
 ## Usage
 
 After starting the server, you can use tools like **Postman** or **cURL** to interact with the API endpoints. For protected routes, include the JWT token in the `Authorization` header:
