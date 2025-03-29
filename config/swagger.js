@@ -1,5 +1,8 @@
 const swaggerJsDoc = require('swagger-jsdoc');
 
+// Get repository name from package.json or environment
+const repoName = 'user-management-api'; // Replace with your actual GitHub repo name if different
+
 const options = {
   definition: {
     openapi: '3.0.0',
@@ -16,6 +19,10 @@ const options = {
         url: 'http://localhost:3000',
         description: 'Development server',
       },
+      {
+        url: `https://ramya-shah.github.io/user-management-api/`, // Replace with your actual API URL when deployed
+        description: 'Production server',
+      }
     ],
     components: {
       securitySchemes: {

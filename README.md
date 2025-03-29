@@ -43,7 +43,7 @@ user-management-api/
 │   ├── authController.js
 │   └── userController.js
 ├── middlewares/
-    └── adminMiddleware.js
+│   ├── adminMiddleware.js
 │   ├── authMiddleware.js
 │   └── errorMiddleware.js
 ├── models/
@@ -53,13 +53,13 @@ user-management-api/
 │   └── userRoutes.js
 ├── validators/
 │   ├── authValidator.js
-│   └── userValidator.js
-    └── validate.js
+│   ├── userValidator.js
+│   └── validate.js
 ├── .env
 ├── .env.example
 ├── app.js
 ├── server.js
-├──  package.json
+├── package.json
 ├── .gitignore
 └── package-lock.json
 ```
@@ -69,7 +69,7 @@ user-management-api/
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/Ramya-Clg/user-management-api.git
+   git clone https://github.com/yourusername/user-management-api.git
    cd user-management-api
    ```
 
@@ -87,7 +87,7 @@ user-management-api/
 
    ```env
    PORT=3000
-   MONGO_URI=mongodb://localhost:27017/user-management
+   DATABASE_URL=mongodb://localhost:27017/user-management
    JWT_SECRET=your_jwt_secret
    ```
 
@@ -111,11 +111,17 @@ user-management-api/
 
 This project includes interactive API documentation using Swagger UI.
 
-Once the server is running, you can access the API documentation at:
+- **Local Documentation:**
+  Once the server is running, you can access the API documentation at:
+  ```
+  http://localhost:3000/api-docs
+  ```
 
-```
-http://localhost:3000/api-docs
-```
+- **Online Documentation:**
+  The API documentation is also available on GitHub Pages:
+  ```
+  https://ramya-shah.github.io/user-management-api/
+  ```
 
 The Swagger UI provides a visual interface to explore the API endpoints, send test requests, and view responses.
 
@@ -213,3 +219,17 @@ After starting the server, you can use tools like **Postman** or **cURL** to int
 ```
 Authorization: Bearer <your_jwt_token>
 ```
+
+## Deploying the Documentation
+
+To manually build and deploy the API documentation:
+
+```bash
+# Build the documentation
+npm run build:docs
+
+# The documentation will be generated in the /docs folder
+# You can then deploy this to GitHub Pages
+```
+
+The GitHub Actions workflow will automatically deploy the documentation when you push to the main branch.
