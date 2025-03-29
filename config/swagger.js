@@ -20,7 +20,7 @@ const options = {
         description: 'Development server',
       },
       {
-        url: `https://ramya-shah.github.io/user-management-api/`, // Replace with your actual API URL when deployed
+        url: `https://ramya-shah.github.io/user-management-api/docs`, // Replace with your actual API URL when deployed
         description: 'Production server',
       }
     ],
